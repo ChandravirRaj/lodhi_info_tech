@@ -136,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
                             child: Text(
-                              "List Tiles",
+                              "Static List View",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,

@@ -12,7 +12,51 @@ class _MyListTileState extends State<MyListTile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("List Tiles Example"),
+        title: const Text("Static List View"),
+      ),
+      body: Container(
+        margin: EdgeInsets.only(top: 5),
+        child: ListView(
+          itemExtent: 150,
+          children: [
+            Container(
+              color: Colors.black38,
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 5),
+              color: Colors.black38,
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 5),
+              color: Colors.black38,
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 5),
+              color: Colors.black38,
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 5),
+              color: Colors.black38,
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 5),
+              color: Colors.black38,
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 5),
+              color: Colors.black38,
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 5),
+              color: Colors.black38,
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 5),
+              color: Colors.black38,
+            ),
+
+          ],
+        ),
       ),
     );
   }
