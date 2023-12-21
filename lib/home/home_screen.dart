@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lodhi_info_tech/practice/my_container.dart';
-import 'package:lodhi_info_tech/practice/tut_list_tiles.dart';
+import 'package:lodhi_info_tech/practice/tut_static_list_view.dart';
 import 'package:lodhi_info_tech/practice/tut_margin_padding.dart';
+import 'package:lodhi_info_tech/practice/tut_vertical_list_view.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -150,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Expanded(
                     child: InkWell(
-                      onTap: () => {_moveToContainerDecoration()},
+                      onTap: () => {_moveToVerticalListView()},
                       child: Container(
                         height: 130,
                         margin:
@@ -172,10 +173,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: double.infinity,
                           height: double.infinity,
                           child: const Padding(
-                            padding: EdgeInsets.all(30.0),
+                            padding: EdgeInsets.all(20.0),
                             child: Center(
                               child: Text(
-                                "Padding And Margin",
+                                "List View ListViewBuilder",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.white,
@@ -546,6 +547,13 @@ class _MyHomePageState extends State<MyHomePage> {
   void _moveToListTileScreen() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return const MyListTile();
+    }));
+  }
+
+  void _moveToVerticalListView() {
+    print("--------_moveToVerticalListView---------");
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const MyVerticalListView();
     }));
   }
 }
