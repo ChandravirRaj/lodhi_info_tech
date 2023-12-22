@@ -3,6 +3,7 @@ import 'package:lodhi_info_tech/practice/my_container.dart';
 import 'package:lodhi_info_tech/practice/tut_static_list_view.dart';
 import 'package:lodhi_info_tech/practice/tut_margin_padding.dart';
 import 'package:lodhi_info_tech/practice/tut_vertical_list_view.dart';
+import 'package:lodhi_info_tech/practice/tut_vertical_list_view_two.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -196,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Expanded(
                     child: InkWell(
-                      onTap: () => {_moveToContainerDecoration()},
+                      onTap: () => {_moveToVerticalListView2()},
                       child: Container(
                         width: 130,
                         height: 130,
@@ -218,7 +219,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
                             child: Text(
-                              "Container Decoration",
+                              "List View with ListView.separated",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
@@ -551,9 +552,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _moveToVerticalListView() {
-    print("--------_moveToVerticalListView---------");
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return const MyVerticalListView();
+    }));
+  }
+
+  void _moveToVerticalListView2() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const MyVerticalListViewTwo();
     }));
   }
 }
