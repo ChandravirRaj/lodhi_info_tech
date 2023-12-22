@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lodhi_info_tech/utils/util.dart';
 
 class MyVerticalListViewTwo extends StatefulWidget {
   const MyVerticalListViewTwo({super.key});
@@ -72,7 +73,7 @@ class _MyVerticalListViewTwoState extends State<MyVerticalListViewTwo> {
                 ),
                 InkWell(
                   onTap: () {
-                    showSnackBar(context, arrNames[index]);
+                    Util.showSnackBar(context, arrNames[index]);
                     // ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   },
                   child: Container(
@@ -93,16 +94,5 @@ class _MyVerticalListViewTwoState extends State<MyVerticalListViewTwo> {
     );
   }
 
-  void showSnackBar(BuildContext context, String itemName) {
-    final snackBar = SnackBar(
-      content: Text("$itemName Itme Click"),
-      action: SnackBarAction(
-        label: 'Undo',
-        onPressed: () {
-          // Some code to undo the change.
-        },
-      ),
-    );
-    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-  }
+
 }
