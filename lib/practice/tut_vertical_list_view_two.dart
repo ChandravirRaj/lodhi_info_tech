@@ -21,6 +21,8 @@ class _MyVerticalListViewTwoState extends State<MyVerticalListViewTwo> {
         separatorBuilder: (context, index) {
           return Divider(
             color: Colors.brown.shade400,
+            height: 0,
+            thickness: 3,
           );
         },
         itemCount: arrNames.length,
@@ -46,8 +48,9 @@ class _MyVerticalListViewTwoState extends State<MyVerticalListViewTwo> {
                               spreadRadius: 3.0),
                         ]),
                     child: const Icon(
-                      Icons.manage_accounts,
+                      Icons.account_balance_sharp,
                       color: Colors.white,
+                      size: 70,
                     ),
                   ),
                 ),
@@ -55,13 +58,13 @@ class _MyVerticalListViewTwoState extends State<MyVerticalListViewTwo> {
                   children: [
                     Text(
                       arrNames[index],
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.blueAccent,
                           fontWeight: FontWeight.bold,
                           fontStyle: FontStyle.italic,
                           fontSize: 25),
                     ),
-                    Text(
+                    const Text(
                       "description",
                       style: TextStyle(
                           color: Colors.blueAccent,
@@ -71,19 +74,16 @@ class _MyVerticalListViewTwoState extends State<MyVerticalListViewTwo> {
                     ),
                   ],
                 ),
-                InkWell(
-                  onTap: () {
-                    Util.showSnackBar(context, arrNames[index]);
-                    // ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                  },
-                  child: Container(
-                    margin: const EdgeInsets.only(right: 10),
-                    height: 40,
-                    width: 40,
-                    child: Icon(
-                      Icons.add_circle_outline_outlined,
-                      color: Colors.blueAccent.shade400,
-                    ),
+                Container(
+                  margin: const EdgeInsets.only(right: 10),
+                  height: 40,
+                  width: 40,
+                  child: IconButton(
+                    color: Colors.blueAccent.shade400,
+                    onPressed: () {
+                      Util.showSnackBar(context, arrNames[index]);
+                    },
+                    icon: const Icon(Icons.add_circle_outline_outlined),
                   ),
                 )
               ],
@@ -93,6 +93,4 @@ class _MyVerticalListViewTwoState extends State<MyVerticalListViewTwo> {
       ),
     );
   }
-
-
 }
