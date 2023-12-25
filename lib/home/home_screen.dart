@@ -4,6 +4,7 @@ import 'package:lodhi_info_tech/practice/tut_static_list_view.dart';
 import 'package:lodhi_info_tech/practice/tut_margin_padding.dart';
 import 'package:lodhi_info_tech/practice/tut_vertical_list_view.dart';
 import 'package:lodhi_info_tech/practice/tut_vertical_list_view_two.dart';
+import 'package:lodhi_info_tech/practice/tut_list_tile.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -233,7 +234,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Expanded(
                     child: InkWell(
-                      onTap: () => {_moveToContainerDecoration()},
+                      onTap: () => {_moveToMyListTile()},
                       child: Container(
                         height: 130,
                         margin:
@@ -258,7 +259,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             padding: EdgeInsets.all(30.0),
                             child: Center(
                               child: Text(
-                                "Padding And Margin",
+                                "List View With List Tile",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.white,
@@ -560,6 +561,12 @@ class _MyHomePageState extends State<MyHomePage> {
   void _moveToVerticalListView2() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return const MyVerticalListViewTwo();
+    }));
+  }
+
+  void _moveToMyListTile() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const MyListTiles2();
     }));
   }
 }
