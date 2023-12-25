@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lodhi_info_tech/practice/my_container.dart';
+import 'package:lodhi_info_tech/practice/tut_custom_fonts.dart';
 import 'package:lodhi_info_tech/practice/tut_static_list_view.dart';
 import 'package:lodhi_info_tech/practice/tut_margin_padding.dart';
 import 'package:lodhi_info_tech/practice/tut_vertical_list_view.dart';
@@ -279,7 +280,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Expanded(
                     child: InkWell(
-                      onTap: () => {_moveToContainerDecoration()},
+                      onTap: () => {_moveToCustomFontsScreen()},
                       child: Container(
                         width: 130,
                         height: 130,
@@ -301,7 +302,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
                             child: Text(
-                              "Container Decoration",
+                              "Add Custom Fonts",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
@@ -567,6 +568,12 @@ class _MyHomePageState extends State<MyHomePage> {
   void _moveToMyListTile() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return const MyListTiles2();
+    }));
+  }
+
+  void _moveToCustomFontsScreen() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const CustomFonts();
     }));
   }
 }

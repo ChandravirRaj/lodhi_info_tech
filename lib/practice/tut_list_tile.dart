@@ -22,8 +22,6 @@ class _MyListTiles2State extends State<MyListTiles2> {
             leading: const CircleAvatar(
               foregroundImage: AssetImage('assets/images/ic_drawer_logo.png'),
               backgroundColor: Colors.brown,
-              // minRadius: 50,
-              // maxRadius: 120,
             ),
             title: Text(
               arrNames[index],
