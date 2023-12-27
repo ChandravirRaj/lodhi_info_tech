@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lodhi_info_tech/practice/my_container.dart';
 import 'package:lodhi_info_tech/practice/tut_custom_fonts.dart';
+import 'package:lodhi_info_tech/practice/tut_custom_theme_style.dart';
 import 'package:lodhi_info_tech/practice/tut_static_list_view.dart';
 import 'package:lodhi_info_tech/practice/tut_margin_padding.dart';
 import 'package:lodhi_info_tech/practice/tut_vertical_list_view.dart';
@@ -48,23 +49,20 @@ class _MyHomePageState extends State<MyHomePage> {
                             border:
                                 Border.all(width: 3, color: Colors.blueAccent),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
-                             BoxShadow(
+                              BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
                             ]),
-                        child: const Center(
+                        child: Center(
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
                             child: Text(
                               "Container Decoration",
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontStyle: FontStyle.italic),
+                              style: Theme.of(context).textTheme.headline3,
                             ),
                           ),
                         ),
@@ -82,11 +80,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.blueAccent.shade100,
                             shape: BoxShape.rectangle,
                             border:
-                            Border.all(width: 3, color: Colors.blueAccent),
+                                Border.all(width: 3, color: Colors.blueAccent),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
-                             BoxShadow(
+                              BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
@@ -94,16 +92,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Container(
                           width: double.infinity,
                           height: double.infinity,
-                          child: const Padding(
+                          child: Padding(
                             padding: EdgeInsets.all(30.0),
                             child: Center(
                               child: Text(
                                 "Padding And Margin",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontStyle: FontStyle.italic,),
+                                style: Theme.of(context).textTheme.headline3,
                               ),
                             ),
                           ),
@@ -127,25 +122,22 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.blueAccent.shade100,
                             shape: BoxShape.rectangle,
                             border:
-                            Border.all(width: 3, color: Colors.blueAccent),
+                                Border.all(width: 3, color: Colors.blueAccent),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
-                             BoxShadow(
+                              BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
                             ]),
-                        child: const Center(
+                        child: Center(
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
                             child: Text(
                               "Static List View",
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontStyle: FontStyle.italic),
+                              style: Theme.of(context).textTheme.headline3,
                             ),
                           ),
                         ),
@@ -158,16 +150,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Container(
                         height: 130,
                         margin:
-                        const EdgeInsets.only(right: 10, top: 20, left: 10),
+                            const EdgeInsets.only(right: 10, top: 20, left: 10),
                         decoration: BoxDecoration(
                             color: Colors.blueAccent.shade100,
                             shape: BoxShape.rectangle,
                             border:
-                            Border.all(width: 3, color: Colors.blueAccent),
+                                Border.all(width: 3, color: Colors.blueAccent),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
-                             BoxShadow(
+                              BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
@@ -175,16 +167,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Container(
                           width: double.infinity,
                           height: double.infinity,
-                          child: const Padding(
+                          child: Padding(
                             padding: EdgeInsets.all(20.0),
                             child: Center(
                               child: Text(
                                 "List View ListViewBuilder",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontStyle: FontStyle.italic,),
+                                  style: Theme.of(context).textTheme.headline3,
                               ),
                             ),
                           ),
@@ -208,25 +197,22 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.blueAccent.shade100,
                             shape: BoxShape.rectangle,
                             border:
-                            Border.all(width: 3, color: Colors.blueAccent),
+                                Border.all(width: 3, color: Colors.blueAccent),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
-                             BoxShadow(
+                              BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
                             ]),
-                        child: const Center(
+                        child: Center(
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
                             child: Text(
                               "List View with ListView.separated",
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontStyle: FontStyle.italic),
+                                style: Theme.of(context).textTheme.headline3,
                             ),
                           ),
                         ),
@@ -239,16 +225,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Container(
                         height: 130,
                         margin:
-                        const EdgeInsets.only(right: 10, top: 20, left: 10),
+                            const EdgeInsets.only(right: 10, top: 20, left: 10),
                         decoration: BoxDecoration(
                             color: Colors.blueAccent.shade100,
                             shape: BoxShape.rectangle,
                             border:
-                            Border.all(width: 3, color: Colors.blueAccent),
+                                Border.all(width: 3, color: Colors.blueAccent),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
-                             BoxShadow(
+                              BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
@@ -256,16 +242,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Container(
                           width: double.infinity,
                           height: double.infinity,
-                          child: const Padding(
+                          child: Padding(
                             padding: EdgeInsets.all(30.0),
                             child: Center(
                               child: Text(
                                 "List View With List Tile",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontStyle: FontStyle.italic,),
+                                style: Theme.of(context).textTheme.headline3,
                               ),
                             ),
                           ),
@@ -289,25 +272,22 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.blueAccent.shade100,
                             shape: BoxShape.rectangle,
                             border:
-                            Border.all(width: 3, color: Colors.blueAccent),
+                                Border.all(width: 3, color: Colors.blueAccent),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
-                             BoxShadow(
+                              BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
                             ]),
-                        child: const Center(
+                        child: Center(
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
                             child: Text(
                               "Add Custom Fonts",
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontStyle: FontStyle.italic),
+                              style: Theme.of(context).textTheme.headline3,
                             ),
                           ),
                         ),
@@ -316,20 +296,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Expanded(
                     child: InkWell(
-                      onTap: () => {_moveToContainerDecoration()},
+                      onTap: () => {_moveToCustomThemeStyleOneScreen()},
                       child: Container(
                         height: 130,
                         margin:
-                        const EdgeInsets.only(right: 10, top: 20, left: 10),
+                            const EdgeInsets.only(right: 10, top: 20, left: 10),
                         decoration: BoxDecoration(
                             color: Colors.blueAccent.shade100,
                             shape: BoxShape.rectangle,
                             border:
-                            Border.all(width: 3, color: Colors.blueAccent),
+                                Border.all(width: 3, color: Colors.blueAccent),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
-                             BoxShadow(
+                              BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
@@ -337,16 +317,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Container(
                           width: double.infinity,
                           height: double.infinity,
-                          child: const Padding(
+                          child:  Padding(
                             padding: EdgeInsets.all(30.0),
                             child: Center(
                               child: Text(
-                                "Padding And Margin",
+                                "Custom Text Theme Style",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontStyle: FontStyle.italic,),
+                                style: Theme.of(context).textTheme.headline3,
                               ),
                             ),
                           ),
@@ -370,11 +347,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.blueAccent.shade100,
                             shape: BoxShape.rectangle,
                             border:
-                            Border.all(width: 3, color: Colors.blueAccent),
+                                Border.all(width: 3, color: Colors.blueAccent),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
-                             BoxShadow(
+                              BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
@@ -401,16 +378,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Container(
                         height: 130,
                         margin:
-                        const EdgeInsets.only(right: 10, top: 20, left: 10),
+                            const EdgeInsets.only(right: 10, top: 20, left: 10),
                         decoration: BoxDecoration(
                             color: Colors.blueAccent.shade100,
                             shape: BoxShape.rectangle,
                             border:
-                            Border.all(width: 3, color: Colors.blueAccent),
+                                Border.all(width: 3, color: Colors.blueAccent),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
-                             BoxShadow(
+                              BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
@@ -427,7 +404,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
-                                  fontStyle: FontStyle.italic,),
+                                  fontStyle: FontStyle.italic,
+                                ),
                               ),
                             ),
                           ),
@@ -451,11 +429,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.blueAccent.shade100,
                             shape: BoxShape.rectangle,
                             border:
-                            Border.all(width: 3, color: Colors.blueAccent),
+                                Border.all(width: 3, color: Colors.blueAccent),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
-                             BoxShadow(
+                              BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
@@ -482,16 +460,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Container(
                         height: 130,
                         margin:
-                        const EdgeInsets.only(right: 10, top: 20, left: 10),
+                            const EdgeInsets.only(right: 10, top: 20, left: 10),
                         decoration: BoxDecoration(
                             color: Colors.blueAccent.shade100,
                             shape: BoxShape.rectangle,
                             border:
-                            Border.all(width: 3, color: Colors.blueAccent),
+                                Border.all(width: 3, color: Colors.blueAccent),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
-                             BoxShadow(
+                              BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
@@ -508,7 +486,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
-                                  fontStyle: FontStyle.italic,),
+                                  fontStyle: FontStyle.italic,
+                                ),
                               ),
                             ),
                           ),
@@ -574,6 +553,12 @@ class _MyHomePageState extends State<MyHomePage> {
   void _moveToCustomFontsScreen() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return const CustomFonts();
+    }));
+  }
+
+  void _moveToCustomThemeStyleOneScreen() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const CustomThemeStyleOne();
     }));
   }
 }
