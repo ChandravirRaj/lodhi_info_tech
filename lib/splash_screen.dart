@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:lodhi_info_tech/home/home_screen.dart';
+import 'package:lodhi_info_tech/utils/util.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -21,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-              builder: (context) => const MyHomePage(title: "Lodhi Info Tech")));
+              builder: (context) => const MyHomePage(title: "Seekho-Flutter")));
     });
   }
 
@@ -48,15 +49,16 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Icon(
-                Icons.icecream_sharp,
-                size: 200.4,
+            children: [
+              const Icon(
+                Icons.ac_unit,
+                size: 200,
                 color: Colors.white,
               ),
               Text(
-                "Lodhi Info Tech",
-                style: TextStyle(color: Colors.white, fontSize: 30),
+                "Seekho-Flutter",
+                style: Util.headerTitleTextStyle(
+                    textColor: Colors.white, fontSize: 30),
               ),
             ],
           ),

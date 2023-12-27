@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
           headline1: TextStyle(color: Colors.grey, fontSize: 25, fontFamily: 'FontRobotoBold'),
           headline2: TextStyle(color: Colors.black87, fontSize: 25, fontFamily: 'FontRobotoMedium'),
           headline3: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'FontRobotoRegular'),
+          headline4: TextStyle(color: Colors.black, fontSize: 25, fontFamily: 'FontRobotoRegular'),
         ),
       ),
       home: const SplashScreen(),

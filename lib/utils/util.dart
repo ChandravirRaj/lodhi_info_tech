@@ -22,4 +22,13 @@ class Util {
         fontFamily: 'FontRobotoBold',
         fontWeight: fontWeight);
   }
+
+  static TextStyle regularTextStyle(
+      {textColor = Colors.purple, double fontSize: 20.0, fontWeight: FontWeight.w300}) {
+    return TextStyle(
+        color: textColor,
+        fontSize: fontSize,
+        fontFamily: 'FontRobotoRegular',
+        fontWeight: fontWeight);
+  }
 }

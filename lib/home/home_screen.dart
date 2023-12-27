@@ -4,6 +4,7 @@ import 'package:lodhi_info_tech/practice/tut_custom_fonts.dart';
 import 'package:lodhi_info_tech/practice/tut_custom_theme_style.dart';
 import 'package:lodhi_info_tech/practice/tut_static_list_view.dart';
 import 'package:lodhi_info_tech/practice/tut_margin_padding.dart';
+import 'package:lodhi_info_tech/practice/tut_text_input.dart';
 import 'package:lodhi_info_tech/practice/tut_vertical_list_view.dart';
 import 'package:lodhi_info_tech/practice/tut_vertical_list_view_two.dart';
 import 'package:lodhi_info_tech/practice/tut_list_tile.dart';
@@ -338,7 +339,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Expanded(
                     child: InkWell(
-                      onTap: () => {_moveToContainerDecoration()},
+                      onTap: () => {_moveToMyTextInput()},
                       child: Container(
                         width: 130,
                         height: 130,
@@ -356,16 +357,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
                             ]),
-                        child: const Center(
+                        child:  Center(
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
                             child: Text(
-                              "Container Decoration",
+                              "TextInput",
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontStyle: FontStyle.italic),
+                              style: Theme.of(context).textTheme.headline3,
                             ),
                           ),
                         ),
@@ -559,6 +557,12 @@ class _MyHomePageState extends State<MyHomePage> {
   void _moveToCustomThemeStyleOneScreen() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return const CustomThemeStyleOne();
+    }));
+  }
+
+  void _moveToMyTextInput() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const MyTextInput();
     }));
   }
 }

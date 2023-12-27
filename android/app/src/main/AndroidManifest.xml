@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lodhi_info_tech">
    <application
-        android:label="lodhi_info_tech"
+        android:label="Seekho-Flutter"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
