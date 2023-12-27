@@ -1,5 +1,9 @@
+import 'dart:developer';
+
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:lodhi_info_tech/utils/constants.dart';
 import 'package:lodhi_info_tech/utils/util.dart';
 
 class MyTextInput extends StatefulWidget {
@@ -12,6 +16,32 @@ class MyTextInput extends StatefulWidget {
 class _MyTextInputState extends State<MyTextInput> {
   var emailInputController = TextEditingController();
   var passwordInputController = TextEditingController();
+  bool _obscureText = true;
+
+  void toggleEye() {
+    setState(() {
+      if (_obscureText) {
+        _obscureText = false;
+      } else {
+        _obscureText = true;
+      }
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void activate() {
+    super.activate();
+  }
+
+  @override
+  void deactivate() {
+    super.deactivate();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +51,7 @@ class _MyTextInputState extends State<MyTextInput> {
         height: double.infinity,
         color: Colors.lightGreen.shade100,
         child: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -31,14 +61,16 @@ class _MyTextInputState extends State<MyTextInput> {
                 controller: emailInputController,
                 style: Theme.of(context).textTheme.headline4,
                 textCapitalization: TextCapitalization.characters,
+                autofocus: true,
+                textInputAction: TextInputAction.next,
                 onChanged: (textString) {
-                  print("------------------$textString-");
+                  print("---------textString---------$textString-");
                 },
                 decoration: InputDecoration(
-                    hintText: "Enter your emailId here",
+                    hintText: Constants.hintEnterEmailAddress,
                     hintStyle: Util.regularTextStyle(
                         textColor: Colors.blueGrey, fontSize: 25),
-                    labelText: "Email Address",
+                    labelText: Constants.lebelEmailAddress,
                     labelStyle: Util.regularTextStyle(
                         textColor: Colors.deepPurple, fontSize: 25),
                     fillColor: Colors.lightGreenAccent,
@@ -63,7 +95,7 @@ class _MyTextInputState extends State<MyTextInput> {
                         borderSide:
                             BorderSide(color: Colors.black87, width: 2))),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               TextField(
@@ -71,38 +103,41 @@ class _MyTextInputState extends State<MyTextInput> {
                 textAlign: TextAlign.start,
                 controller: passwordInputController,
                 style: Theme.of(context).textTheme.headline4,
-                obscureText: true,
+                obscureText: _obscureText,
                 obscuringCharacter: "#",
+                textInputAction: TextInputAction.done,
                 decoration: InputDecoration(
-                    hintText: "Enter your password here",
+                    hintText: Constants.hintEnterPassword,
                     hintStyle: Util.regularTextStyle(
                         textColor: Colors.blueGrey, fontSize: 25),
                     fillColor: Colors.lightGreenAccent,
-                    labelText: "Password",
+                    labelText: Constants.lebelPassword,
                     labelStyle: Util.regularTextStyle(
                         textColor: Colors.deepPurple, fontSize: 25),
-                    prefixIcon: Icon(
+                    prefixIcon: const Icon(
                       Icons.password_outlined,
                       color: Colors.deepPurple,
                       size: 30,
                     ),
                     suffixIcon: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
+                      onPressed: () {
+                        toggleEye();
+                      },
+                      icon: const Icon(
                         Icons.remove_red_eye,
                         size: 30,
                         color: Colors.deepPurple,
                       ),
-                      style: ButtonStyle(),
+                      style: const ButtonStyle(),
                     ),
-                    focusedBorder: OutlineInputBorder(
+                    focusedBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7)),
                         borderSide:
                             BorderSide(color: Colors.deepPurple, width: 2)),
-                    disabledBorder: OutlineInputBorder(
+                    disabledBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7)),
                         borderSide: BorderSide(color: Colors.grey, width: 2)),
-                    enabledBorder: OutlineInputBorder(
+                    enabledBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7)),
                         borderSide:
                             BorderSide(color: Colors.black87, width: 2))),
@@ -123,7 +158,7 @@ class _MyTextInputState extends State<MyTextInput> {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 18, bottom: 18),
                       child: Text(
-                        "Submit",
+                        Constants.textSubmit,
                         style: Util.headerTitleTextStyle(
                             textColor: Colors.white, fontSize: 25),
                       ),
@@ -136,7 +171,31 @@ class _MyTextInputState extends State<MyTextInput> {
     );
   }
 
+  @override
+  void dispose() {
+    emailInputController.dispose();
+    passwordInputController.dispose();
+    super.dispose();
+  }
+
   void _handleSubmitButtonClick(String email, String password) {
-    print("email : $email   password : $password");
+    var emailErrorMessage = "";
+
+    if (email.isEmpty) {
+      emailErrorMessage = Constants.errorMessageEnterEmail;
+    } else {
+      var isEmailValid = EmailValidator.validate(email);
+
+      if (isEmailValid) {
+      } else {
+        emailErrorMessage = Constants.errorMessageEnterValidEmail;
+      }
+    }
+
+    var isValidPassword = Util.validateStructure(password);
+    if (isValidPassword) {
+    } else {
+      var error = Util.validatePassword(password);
+    }
   }
 }

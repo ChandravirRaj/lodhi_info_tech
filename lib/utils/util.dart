@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lodhi_info_tech/utils/constants.dart';
 
 class Util {
   static void showSnackBar(BuildContext context, String itemName) {
@@ -15,7 +16,9 @@ class Util {
   }
 
   static TextStyle headerTitleTextStyle(
-      {textColor = Colors.purple, double fontSize: 20.0, fontWeight: FontWeight.w300}) {
+      {textColor = Colors.purple,
+      double fontSize: 20.0,
+      fontWeight: FontWeight.w300}) {
     return TextStyle(
         color: textColor,
         fontSize: fontSize,
@@ -24,11 +27,33 @@ class Util {
   }
 
   static TextStyle regularTextStyle(
-      {textColor = Colors.purple, double fontSize: 20.0, fontWeight: FontWeight.w300}) {
+      {textColor = Colors.purple,
+      double fontSize: 20.0,
+      fontWeight: FontWeight.w300}) {
     return TextStyle(
         color: textColor,
         fontSize: fontSize,
         fontFamily: 'FontRobotoRegular',
         fontWeight: fontWeight);
+  }
+
+  static String? validatePassword(String value) {
+    RegExp regex = RegExp(Constants.passwordRegex);
+    if (value.isEmpty) {
+      return Constants.errorMessagePasswordEmpty;
+    } else if (value.length < 8) {
+      return Constants.errorMessagePasswordLengthMinimum;
+    } else {
+      if (!regex.hasMatch(value)) {
+        return Constants.errorMessageEnterValidPassword;
+      } else {
+        return null;
+      }
+    }
+  }
+
+  static bool validateStructure(String value) {
+    RegExp regExp = RegExp(Constants.emailRegex);
+    return regExp.hasMatch(value);
   }
 }
