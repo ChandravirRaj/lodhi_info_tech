@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:lodhi_info_tech/home/home_screen.dart';
+import 'package:lodhi_info_tech/utils/constants.dart';
 import 'package:lodhi_info_tech/utils/util.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-              builder: (context) => const MyHomePage(title: "Seekho-Flutter")));
+              builder: (context) => const MyHomePage(title: Constants.textHome)));
     });
   }
 
@@ -56,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 color: Colors.white,
               ),
               Text(
-                "Seekho-Flutter",
+                Constants.textAppName,
                 style: Util.headerTitleTextStyle(
                     textColor: Colors.white, fontSize: 30),
               ),
