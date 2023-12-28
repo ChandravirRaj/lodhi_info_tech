@@ -16,7 +16,10 @@ class MyTextInput extends StatefulWidget {
 class _MyTextInputState extends State<MyTextInput> {
   var emailInputController = TextEditingController();
   var passwordInputController = TextEditingController();
+
   bool _obscureText = true;
+  var emailErrorText;
+  var emailErrorMessage = "";
 
   void toggleEye() {
     setState(() {
@@ -25,6 +28,12 @@ class _MyTextInputState extends State<MyTextInput> {
       } else {
         _obscureText = true;
       }
+    });
+  }
+
+  void setErrorMessage(){
+    setState(() {
+      emailErrorText = emailErrorMessage;
     });
   }
 
@@ -55,7 +64,7 @@ class _MyTextInputState extends State<MyTextInput> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextField(
+              TextFormField(
                 cursorColor: Colors.deepPurple,
                 textAlign: TextAlign.start,
                 controller: emailInputController,
@@ -79,17 +88,25 @@ class _MyTextInputState extends State<MyTextInput> {
                       color: Colors.deepPurple,
                       size: 30,
                     ),
+                    errorText: emailErrorText,
                     errorStyle: Util.regularTextStyle(textColor: Colors.red),
                     errorBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7)),
                         borderSide: BorderSide(color: Colors.red, width: 2)),
+
+                    focusedErrorBorder:  const OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(7)),
+                          borderSide: BorderSide(color: Colors.red, width: 2)),
+
                     focusedBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7)),
                         borderSide:
                             BorderSide(color: Colors.deepPurple, width: 2)),
+
                     disabledBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7)),
                         borderSide: BorderSide(color: Colors.grey, width: 2)),
+
                     enabledBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7)),
                         borderSide:
@@ -179,16 +196,18 @@ class _MyTextInputState extends State<MyTextInput> {
   }
 
   void _handleSubmitButtonClick(String email, String password) {
-    var emailErrorMessage = "";
+
 
     if (email.isEmpty) {
       emailErrorMessage = Constants.errorMessageEnterEmail;
+      setErrorMessage();
     } else {
       var isEmailValid = EmailValidator.validate(email);
 
       if (isEmailValid) {
       } else {
         emailErrorMessage = Constants.errorMessageEnterValidEmail;
+        setErrorMessage();
       }
     }
 

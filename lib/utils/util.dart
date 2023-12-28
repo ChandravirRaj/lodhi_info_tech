@@ -56,4 +56,11 @@ class Util {
     RegExp regExp = RegExp(Constants.emailRegex);
     return regExp.hasMatch(value);
   }
+
+  // static launchURL(url) async {
+  //   final Uri uri = Uri.parse(url);
+  //   if (!await launchUrl(uri)) {
+  //     throw Exception('Could not launch $url');
+  //   }
+  // }
 }

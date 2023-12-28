@@ -15,7 +15,7 @@ class Constants{
   static const String hintEnterEmailAddress = "Enter email address";
   static const String hintEnterPassword = "Enter your password";
 
-  //---------------------------Error Messages-------------------------------------------
+  //---------------------------Error Messages-----------------------------------
   static const String errorMessageEnterValidEmail = "Please enter valid email";
   static const String errorMessageEnterEmail = "Please enter email";
   static const String errorMessagePasswordEmpty = "Please enter password";
