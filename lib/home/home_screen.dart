@@ -3,6 +3,7 @@ import 'package:lodhi_info_tech/practice/my_container.dart';
 import 'package:lodhi_info_tech/practice/tut_custom_fonts.dart';
 import 'package:lodhi_info_tech/practice/tut_custom_theme_style.dart';
 import 'package:lodhi_info_tech/practice/tut_gridview_types.dart';
+import 'package:lodhi_info_tech/practice/tut_stack.dart';
 import 'package:lodhi_info_tech/practice/tut_static_list_view.dart';
 import 'package:lodhi_info_tech/practice/tut_margin_padding.dart';
 import 'package:lodhi_info_tech/practice/tut_text_input.dart';
@@ -416,34 +417,31 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Expanded(
                     child: InkWell(
-                      onTap: () => {_moveToContainerDecoration()},
+                      onTap: () => {_moveToMyStack()},
                       child: Container(
                         width: 130,
                         height: 130,
                         margin: const EdgeInsets.only(left: 10, top: 20),
                         decoration: BoxDecoration(
-                            color: Colors.blueAccent.shade100,
+                            color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
                             border:
-                                Border.all(width: 3, color: Colors.blueAccent),
+                            Border.all(width: 3, color: Colors.black54),
                             borderRadius:
-                                const BorderRadius.all(Radius.circular(10.0)),
+                            const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
                               BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
                             ]),
-                        child: const Center(
+                        child: Center(
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
                             child: Text(
-                              "Container Decoration",
+                              "Flutter Stack",
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontStyle: FontStyle.italic),
+                              style: Theme.of(context).textTheme.headline2,
                             ),
                           ),
                         ),
@@ -452,7 +450,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Expanded(
                     child: InkWell(
-                      onTap: () => {_moveToContainerDecoration()},
+                      onTap: () => {_moveToMyStack()},
                       child: Container(
                         height: 130,
                         margin:
@@ -568,6 +566,12 @@ class _MyHomePageState extends State<MyHomePage> {
   void _moveToMyGridView() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return const GridViewTypes();
+    }));
+  }
+
+  void _moveToMyStack() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const MyStack();
     }));
   }
 }
