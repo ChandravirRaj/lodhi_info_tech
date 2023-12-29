@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:lodhi_info_tech/practice/grid/tut_gridview_custom.dart';
 import 'package:lodhi_info_tech/practice/grid/tut_gridview_extent.dart';
 import 'package:lodhi_info_tech/practice/grid/tut_gridview_builder.dart';
 import 'package:lodhi_info_tech/utils/util.dart';
@@ -215,7 +216,7 @@ class _GridViewTypesState extends State<GridViewTypes> {
                       padding: const EdgeInsets.all(20.0),
                       child: InkWell(
                         onTap: () {
-
+                          _moveToCustome();
                         },
                         child: Container(
                           width: double.infinity,
@@ -293,6 +294,12 @@ class _GridViewTypesState extends State<GridViewTypes> {
   void _moveToBuilder() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return const GirdViewWithBuilder();
+    }));
+  }
+
+  void _moveToCustome() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const GirdViewWithCustom();
     }));
   }
 }
