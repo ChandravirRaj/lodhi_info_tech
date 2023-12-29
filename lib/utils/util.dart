@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:lodhi_info_tech/utils/constants.dart';
 
 class Util {
+
   static void showSnackBar(BuildContext context, String itemName) {
     final snackBar = SnackBar(
-      content: Text("You are on item $itemName Add functionality !!!"),
+      content: Text("You are on item $itemName  !!!"),
       action: SnackBarAction(
         label: 'Undo',
         onPressed: () {
@@ -14,6 +15,19 @@ class Util {
     );
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
+
+  // static void showToastMessage( String message){
+  //   print("-------message-----------------$message-------");
+  //   Fluttertoast.showToast(
+  //       msg: message,
+  //       toastLength: Toast.LENGTH_SHORT,
+  //       gravity: ToastGravity.CENTER,
+  //       timeInSecForIosWeb: 1,
+  //       backgroundColor: Colors.red,
+  //       textColor: Colors.white,
+  //       fontSize: 16.0
+  //   );
+  // }
 
   static TextStyle headerTitleTextStyle(
       {textColor = Colors.purple,
