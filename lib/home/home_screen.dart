@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lodhi_info_tech/practice/my_container.dart';
 import 'package:lodhi_info_tech/practice/tut_custom_fonts.dart';
 import 'package:lodhi_info_tech/practice/tut_custom_theme_style.dart';
+import 'package:lodhi_info_tech/practice/tut_fa_icons.dart';
 import 'package:lodhi_info_tech/practice/tut_gridview_types.dart';
 import 'package:lodhi_info_tech/practice/tut_stack.dart';
 import 'package:lodhi_info_tech/practice/tut_static_list_view.dart';
@@ -26,7 +27,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title,style: Util.headerTitleTextStyle(textColor: Colors.white,fontSize: 23),),
+        title: Text(
+          widget.title,
+          style:
+              Util.headerTitleTextStyle(textColor: Colors.white, fontSize: 23),
+        ),
         leading: const IconButton(onPressed: null, icon: Icon(Icons.menu)),
       ),
       body: Container(
@@ -50,8 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
-                            border:
-                                Border.all(width: 3, color: Colors.black54),
+                            border: Border.all(width: 3, color: Colors.black54),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
@@ -66,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Text(
                               "Container Decoration",
                               textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.headline2,
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
                           ),
                         ),
@@ -83,10 +87,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
-                            border:
-                            Border.all(width: 3, color: Colors.black54),
+                            border: Border.all(width: 3, color: Colors.black54),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
                               BoxShadow(
                                   color: Colors.black12,
@@ -102,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: Text(
                                 "Padding And Margin",
                                 textAlign: TextAlign.center,
-                                style: Theme.of(context).textTheme.headline2,
+                                style: Theme.of(context).textTheme.headlineSmall,
                               ),
                             ),
                           ),
@@ -125,10 +128,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
-                            border:
-                            Border.all(width: 3, color: Colors.black54),
+                            border: Border.all(width: 3, color: Colors.black54),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
                               BoxShadow(
                                   color: Colors.black12,
@@ -141,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Text(
                               "Static List View",
                               textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.headline2,
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
                           ),
                         ),
@@ -158,10 +160,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
-                            border:
-                            Border.all(width: 3, color: Colors.black54),
+                            border: Border.all(width: 3, color: Colors.black54),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
                               BoxShadow(
                                   color: Colors.black12,
@@ -177,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: Text(
                                 "List View ListViewBuilder",
                                 textAlign: TextAlign.center,
-                                  style: Theme.of(context).textTheme.headline2,
+                                style: Theme.of(context).textTheme.headlineSmall,
                               ),
                             ),
                           ),
@@ -200,10 +201,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
-                            border:
-                            Border.all(width: 3, color: Colors.black54),
+                            border: Border.all(width: 3, color: Colors.black54),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
                               BoxShadow(
                                   color: Colors.black12,
@@ -216,7 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Text(
                               "List View with ListView.separated",
                               textAlign: TextAlign.center,
-                                style: Theme.of(context).textTheme.headline2,
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
                           ),
                         ),
@@ -233,10 +233,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
-                            border:
-                            Border.all(width: 3, color: Colors.black54),
+                            border: Border.all(width: 3, color: Colors.black54),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
                               BoxShadow(
                                   color: Colors.black12,
@@ -252,7 +251,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: Text(
                                 "List View With List Tile",
                                 textAlign: TextAlign.center,
-                                style: Theme.of(context).textTheme.headline2,
+                                style: Theme.of(context).textTheme.headlineSmall,
                               ),
                             ),
                           ),
@@ -275,10 +274,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
-                            border:
-                            Border.all(width: 3, color: Colors.black54),
+                            border: Border.all(width: 3, color: Colors.black54),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
                               BoxShadow(
                                   color: Colors.black12,
@@ -291,7 +289,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Text(
                               "Add Custom Fonts",
                               textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.headline2,
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
                           ),
                         ),
@@ -308,10 +306,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
-                            border:
-                            Border.all(width: 3, color: Colors.black54),
+                            border: Border.all(width: 3, color: Colors.black54),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
                               BoxShadow(
                                   color: Colors.black12,
@@ -321,13 +318,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Container(
                           width: double.infinity,
                           height: double.infinity,
-                          child:  Padding(
+                          child: Padding(
                             padding: EdgeInsets.all(10.0),
                             child: Center(
                               child: Text(
                                 "Custom Text Theme Style",
                                 textAlign: TextAlign.center,
-                                style: Theme.of(context).textTheme.headline2,
+                                style: Theme.of(context).textTheme.headlineSmall,
                               ),
                             ),
                           ),
@@ -350,23 +347,22 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
-                            border:
-                            Border.all(width: 3, color: Colors.black54),
+                            border: Border.all(width: 3, color: Colors.black54),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
                               BoxShadow(
                                   color: Colors.black12,
                                   blurRadius: 5.0,
                                   spreadRadius: 5.0),
                             ]),
-                        child:  Center(
+                        child: Center(
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
                             child: Text(
                               "TextField",
                               textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.headline2,
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
                           ),
                         ),
@@ -383,10 +379,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
-                            border:
-                            Border.all(width: 3, color: Colors.black54),
+                            border: Border.all(width: 3, color: Colors.black54),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
                               BoxShadow(
                                   color: Colors.black12,
@@ -396,13 +391,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Container(
                           width: double.infinity,
                           height: double.infinity,
-                          child:  Padding(
+                          child: Padding(
                             padding: EdgeInsets.all(30.0),
                             child: Center(
                               child: Text(
                                 "Flutter GridView",
                                 textAlign: TextAlign.center,
-                                style: Theme.of(context).textTheme.headline2,
+                                style: Theme.of(context).textTheme.headlineSmall,
                               ),
                             ),
                           ),
@@ -425,10 +420,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         decoration: BoxDecoration(
                             color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
-                            border:
-                            Border.all(width: 3, color: Colors.black54),
+                            border: Border.all(width: 3, color: Colors.black54),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
                               BoxShadow(
                                   color: Colors.black12,
@@ -441,7 +435,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Text(
                               "Flutter Stack",
                               textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.headline2,
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
                           ),
                         ),
@@ -450,18 +444,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Expanded(
                     child: InkWell(
-                      onTap: () => {_moveToMyStack()},
+                      onTap: () => {_moveFAIcons()},
                       child: Container(
                         height: 130,
                         margin:
                             const EdgeInsets.only(right: 10, top: 20, left: 10),
                         decoration: BoxDecoration(
-                            color: Colors.blueAccent.shade100,
+                            color: Colors.red.shade400,
                             shape: BoxShape.rectangle,
-                            border:
-                                Border.all(width: 3, color: Colors.blueAccent),
+                            border: Border.all(width: 3, color: Colors.black54),
                             borderRadius:
-                                const BorderRadius.all(Radius.circular(10.0)),
+                            const BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: const [
                               BoxShadow(
                                   color: Colors.black12,
@@ -471,17 +464,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Container(
                           width: double.infinity,
                           height: double.infinity,
-                          child: const Padding(
-                            padding: EdgeInsets.all(30.0),
+                          child: Padding(
+                            padding: EdgeInsets.all(10.0),
                             child: Center(
                               child: Text(
-                                "Padding And Margin",
+                                "Font Awesome Icon",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontStyle: FontStyle.italic,
-                                ),
+                                style: Theme.of(context).textTheme.headlineSmall,
                               ),
                             ),
                           ),
@@ -491,16 +480,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
-              const SizedBox(height: 40,)
+              const SizedBox(
+                height: 40,
+              )
             ],
           ),
         ),
       ),
-      /*floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),*/ // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 
@@ -572,6 +558,12 @@ class _MyHomePageState extends State<MyHomePage> {
   void _moveToMyStack() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return const MyStack();
+    }));
+  }
+
+  void _moveFAIcons() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const FAIcons();
     }));
   }
 }

@@ -14,13 +14,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primaryColor: Colors.red.shade700,
+        primaryColorDark: Colors.red.shade400,
+        primaryColorLight: Colors.red.shade100,
         splashColor: Colors.red,
+        appBarTheme: AppBarTheme(
+          color: Colors.red.shade500,
+          centerTitle: true,
+          shadowColor: Colors.grey,
+          titleTextStyle: const TextStyle(color: Colors.white, fontSize: 22,
+              fontFamily: 'FontRobotoMedium'),
+          iconTheme: const IconThemeData(color: Colors.white,size: 30)
+
+        ),
         textTheme: const TextTheme(
-          headline1: TextStyle(color: Colors.grey, fontSize: 25, fontFamily: 'FontRobotoBold'),
-          headline2: TextStyle(color: Colors.white, fontSize: 22, fontFamily: 'FontRobotoMedium'),
-          headline3: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'FontRobotoRegular'),
-          headline4: TextStyle(color: Colors.black, fontSize: 25, fontFamily: 'FontRobotoRegular'),
+          headlineLarge: TextStyle(color: Colors.grey, fontSize: 25, fontFamily: 'FontRobotoBold'),
+          headlineMedium: TextStyle(color: Colors.white, fontSize: 22, fontFamily: 'FontRobotoMedium'),
+          headlineSmall: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'FontRobotoMedium'),
         ),
       ),
       home: const SplashScreen(),
