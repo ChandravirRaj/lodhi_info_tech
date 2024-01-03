@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lodhi_info_tech/practice/my_container.dart';
+import 'package:lodhi_info_tech/practice/tut_constraint_box.dart';
 import 'package:lodhi_info_tech/practice/tut_custom_fonts.dart';
 import 'package:lodhi_info_tech/practice/tut_custom_theme_style.dart';
 import 'package:lodhi_info_tech/practice/tut_fa_icons.dart';
@@ -540,7 +541,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Expanded(
                     child: InkWell(
-                      onTap: () => {_moveFAIcons()},
+                      onTap: () => {_moveToConstraintBox()},
                       child: Container(
                         height: 130,
                         margin:
@@ -672,7 +673,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _moveToConstraintBox() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
-      return const FAIcons();
+      return const MyConstraintBox();
     }));
   }
 }
