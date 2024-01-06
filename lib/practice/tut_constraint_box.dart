@@ -15,7 +15,7 @@ class _MyConstraintBoxState extends State<MyConstraintBox> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Positioned Widget",
+          "ConstrainedBox",
           style:
               Util.headerTitleTextStyle(textColor: Colors.white, fontSize: 25),
         ),

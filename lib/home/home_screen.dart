@@ -578,6 +578,38 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
+              Container(
+                height: 130,
+                margin:
+                const EdgeInsets.only(right: 10, top: 20, left: 10),
+                decoration: BoxDecoration(
+                    color: Colors.blueGrey.shade400,
+                    shape: BoxShape.rectangle,
+                    border: Border.all(width: 3, color: Colors.black54),
+                    borderRadius:
+                    const BorderRadius.all(Radius.circular(10.0)),
+                    boxShadow: const [
+                      BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 5.0,
+                          spreadRadius: 5.0),
+                    ]),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: double.infinity,
+                  child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Center(
+                      child: Text(
+                        "Move From One Screnn to Another",
+                        textAlign: TextAlign.center,
+                        style:
+                        Theme.of(context).textTheme.headlineSmall,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
               const SizedBox(
                 height: 40,
               )
