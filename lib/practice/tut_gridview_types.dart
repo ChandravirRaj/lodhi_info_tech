@@ -4,6 +4,7 @@ import 'package:lodhi_info_tech/practice/grid/tut_gridview_custom.dart';
 import 'package:lodhi_info_tech/practice/grid/tut_gridview_extent.dart';
 import 'package:lodhi_info_tech/practice/grid/tut_gridview_builder.dart';
 import 'package:lodhi_info_tech/utils/util.dart';
+import 'package:url_launcher/link.dart';
 
 import 'grid/tut_gridview_count.dart';
 
@@ -15,6 +16,12 @@ class GridViewTypes extends StatefulWidget {
 }
 
 class _GridViewTypesState extends State<GridViewTypes> {
+  var extent =
+      'https://api.flutter.dev/flutter/widgets/GridView/GridView.extent.html';
+  var count = 'https://api.flutter.dev/flutter/widgets/GridView/GridView.count.html';
+  var builder = 'https://api.flutter.dev/flutter/widgets/GridView/GridView.builder.html';
+  var custom = 'https://api.flutter.dev/flutter/widgets/GridView/GridView.custom.html';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +61,7 @@ class _GridViewTypesState extends State<GridViewTypes> {
                             shape: BoxShape.rectangle,
                             border: Border.all(width: 3, color: Colors.white),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                           ),
                           child: Column(
                             children: [
@@ -74,24 +81,17 @@ class _GridViewTypesState extends State<GridViewTypes> {
                                       textColor: Colors.black87, fontSize: 21),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: 'https://api.flutter.dev/flutter/widgets/GridView/GridView.count.html',
-                                        style: Util.regularTextStyle(
-                                            textColor: Colors.blue,
-                                            fontSize: 20),
-                                        recognizer: TapGestureRecognizer()
-                                          ..onTap = () {
-                                            // Util.launchURL("https://api.flutter.dev/flutter/widgets/GridView/GridView.count.html");
-                                          },
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                              Link(
+                                uri: Uri.parse(count),
+                                builder: (BuildContext context,
+                                        FollowLink? followLink) =>
+                                    InkWell(
+                                        onTap: followLink,
+                                        child: Text(
+                                          count,
+                                          style: const TextStyle(
+                                              fontSize: 22, color: Colors.blue),
+                                        )),
                               ),
                             ],
                           ),
@@ -111,7 +111,7 @@ class _GridViewTypesState extends State<GridViewTypes> {
                             shape: BoxShape.rectangle,
                             border: Border.all(width: 3, color: Colors.white),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                           ),
                           child: Column(
                             children: [
@@ -131,24 +131,17 @@ class _GridViewTypesState extends State<GridViewTypes> {
                                       textColor: Colors.black87, fontSize: 21),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: 'https://api.flutter.dev/flutter/widgets/GridView/GridView.extent.html',
-                                        style: Util.regularTextStyle(
-                                            textColor: Colors.blue,
-                                            fontSize: 20),
-                                        recognizer: TapGestureRecognizer()
-                                          ..onTap = () {
-                                            // Util.launchURL("https://api.flutter.dev/flutter/widgets/GridView/GridView.count.html");
-                                          },
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                              Link(
+                                uri: Uri.parse(extent),
+                                builder: (BuildContext context,
+                                        FollowLink? followLink) =>
+                                    InkWell(
+                                        onTap: followLink,
+                                        child: Text(
+                                          extent,
+                                          style: TextStyle(
+                                              fontSize: 22, color: Colors.blue),
+                                        )),
                               ),
                             ],
                           ),
@@ -168,7 +161,7 @@ class _GridViewTypesState extends State<GridViewTypes> {
                             shape: BoxShape.rectangle,
                             border: Border.all(width: 3, color: Colors.white),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                           ),
                           child: Column(
                             children: [
@@ -188,24 +181,17 @@ class _GridViewTypesState extends State<GridViewTypes> {
                                       textColor: Colors.black87, fontSize: 21),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: 'https://api.flutter.dev/flutter/widgets/GridView/GridView.builder.html',
-                                        style: Util.regularTextStyle(
-                                            textColor: Colors.blue,
-                                            fontSize: 20),
-                                        recognizer: TapGestureRecognizer()
-                                          ..onTap = () {
-                                            // Util.launchURL("https://api.flutter.dev/flutter/widgets/GridView/GridView.count.html");
-                                          },
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                              Link(
+                                uri: Uri.parse(builder),
+                                builder: (BuildContext context,
+                                    FollowLink? followLink) =>
+                                    InkWell(
+                                        onTap: followLink,
+                                        child: Text(
+                                          builder,
+                                          style: TextStyle(
+                                              fontSize: 22, color: Colors.blue),
+                                        )),
                               ),
                             ],
                           ),
@@ -225,7 +211,7 @@ class _GridViewTypesState extends State<GridViewTypes> {
                             shape: BoxShape.rectangle,
                             border: Border.all(width: 3, color: Colors.white),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                           ),
                           child: Column(
                             children: [
@@ -245,24 +231,17 @@ class _GridViewTypesState extends State<GridViewTypes> {
                                       textColor: Colors.black87, fontSize: 21),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: 'https://api.flutter.dev/flutter/widgets/GridView/GridView.custom.html',
-                                        style: Util.regularTextStyle(
-                                            textColor: Colors.blue,
-                                            fontSize: 20),
-                                        recognizer: TapGestureRecognizer()
-                                          ..onTap = () {
-                                            // Util.launchURL("https://api.flutter.dev/flutter/widgets/GridView/GridView.count.html");
-                                          },
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                              Link(
+                                uri: Uri.parse(custom),
+                                builder: (BuildContext context,
+                                    FollowLink? followLink) =>
+                                    InkWell(
+                                        onTap: followLink,
+                                        child: Text(
+                                          custom,
+                                          style: TextStyle(
+                                              fontSize: 22, color: Colors.blue),
+                                        )),
                               ),
                             ],
                           ),
