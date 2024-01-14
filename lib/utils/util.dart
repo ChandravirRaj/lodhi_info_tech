@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lodhi_info_tech/utils/constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Util {
 
@@ -71,10 +72,10 @@ class Util {
     return regExp.hasMatch(value);
   }
 
-  // static launchURL(url) async {
-  //   final Uri uri = Uri.parse(url);
-  //   if (!await launchUrl(uri)) {
-  //     throw Exception('Could not launch $url');
-  //   }
-  // }
+  static launchURL(url) async {
+    final Uri uri = Uri.parse(url);
+    if (!await launchUrl(uri)) {
+      throw Exception('Could not launch $url');
+    }
+  }
 }
