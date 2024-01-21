@@ -38,7 +38,7 @@ class _CustomTabsDesignState extends State<CustomTabsDesign>
           children: [
             Container(
               color: Colors.blueGrey.shade500,
-              height: 45,
+              height: 40,
               margin: EdgeInsets.only(top: 50),
               child: TabBar(
                 controller: tabController,
@@ -102,7 +102,7 @@ class _CustomTabsDesignState extends State<CustomTabsDesign>
                       child: Text(
                         'Text',
                         style: TextStyle(
-                            color: _activeTabIndex == 4
+                            color: _activeTabIndex == 5
                                 ? Colors.yellow
                                 : Colors.white),
                       )),
@@ -110,7 +110,7 @@ class _CustomTabsDesignState extends State<CustomTabsDesign>
                       child: Text(
                         'Char',
                         style: TextStyle(
-                            color: _activeTabIndex == 4
+                            color: _activeTabIndex == 6
                                 ? Colors.yellow
                                 : Colors.white),
                       )),
@@ -118,7 +118,7 @@ class _CustomTabsDesignState extends State<CustomTabsDesign>
                       child: Text(
                         'Boolean',
                         style: TextStyle(
-                            color: _activeTabIndex == 4
+                            color: _activeTabIndex == 7
                                 ? Colors.yellow
                                 : Colors.white),
                       )),
