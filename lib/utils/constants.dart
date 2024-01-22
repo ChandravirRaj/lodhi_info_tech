@@ -22,4 +22,6 @@ class Constants{
   static const String errorMessagePasswordLengthMinimum = "Password minimum length should be 8 char";
   static const String errorMessageEnterValidPassword = "Enter valid password";
 
+  static const String sendDataToNewScreen = "Send data to a new screen";
+
 }
