@@ -23,5 +23,6 @@ class Constants{
   static const String errorMessageEnterValidPassword = "Enter valid password";
 
   static const String sendDataToNewScreen = "Send data to a new screen";
+  static const String returnDataFromScreen = "Return data from a screen";
 
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lodhi_info_tech/practice/routing/ontoother/FirstPage.dart';
 import 'package:lodhi_info_tech/practice/routing/passdata/tut_todo_list.dart';
 import 'package:lodhi_info_tech/practice/routing/tabs.dart';
@@ -7,7 +6,6 @@ import 'package:lodhi_info_tech/utils/constants.dart';
 import 'package:lodhi_info_tech/utils/util.dart';
 import 'package:url_launcher/link.dart';
 
-import 'TabsWithTabcontroller.dart';
 
 class NavAndRouting extends StatefulWidget {
   const NavAndRouting({super.key});
@@ -22,6 +20,7 @@ class _NavAndRoutingState extends State<NavAndRouting> {
   var navigationBasics =
       'https://docs.flutter.dev/cookbook/navigation/navigation-basics';
   var passData = 'https://docs.flutter.dev/cookbook/navigation/passing-data';
+  var returnData = 'https://docs.flutter.dev/cookbook/navigation/returning-data';
 
   @override
   Widget build(BuildContext context) {
@@ -198,6 +197,49 @@ class _NavAndRoutingState extends State<NavAndRouting> {
                     ),
                   ),
                 ),
+              ),
+              Card(
+                margin: EdgeInsets.only(top: 20),
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            _moveToTodoPage();
+                          },
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: Text(
+                              Constants.returnDataFromScreen,
+                              style: Util.headerTitleTextStyle()
+                                  .copyWith(fontSize: 25),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          child: TextButton(
+                            onPressed: () {
+                              Util.launchURL(returnData);
+                            },
+                            child: Text(
+                              returnData,
+                              style: Util.regularTextStyle()
+                                  .copyWith(color: Colors.blue, fontSize: 15),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
               )
             ],
           ),
@@ -223,4 +265,6 @@ class _NavAndRoutingState extends State<NavAndRouting> {
       return const TodoListPage();
     }));
   }
+
+
 }
